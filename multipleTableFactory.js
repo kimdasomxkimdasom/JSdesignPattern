@@ -1,11 +1,3 @@
-
-// for(let x=1; x<10; x++){
-//     console.log(x+"단");
-//     for(let y=1; y<10; y++){
-//         console.log(x+`*`+y+`=`+x*y);
-//     }
-// }
-
 var Factory = function () {
 
     this.create = function (type) {
@@ -91,10 +83,10 @@ function mutipleFactory() {
     var result = [];
     var factory = new Factory();
 
-    result.push(factory.create("1단"));
     result.push(factory.create("2단"));
-    result.push(factory.create("3단"));
     result.push(factory.create("4단"));
+    result.push(factory.create("6단"));
+    result.push(factory.create("8단"));
 
     for (var i = 0, len = result.length; i < len; i++) {
         result[i].say();

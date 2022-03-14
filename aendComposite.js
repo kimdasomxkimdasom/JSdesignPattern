@@ -1,21 +1,11 @@
-var Test = function (name) {
+var Composite = function (name) {
     this.children = [];
     this.name = name;
 }
 
-Test.prototype = {
+Composite.prototype = {
     add: function (child) {
         this.children.push(child);
-    },
-
-    remove: function (child) {
-        var length = this.children.length;
-        for (var i = 0; i < length; i++) {
-            if (this.children[i] === child) {
-                this.children.splice(i, 1);
-                return;
-            }
-        }
     },
 
     getChild: function (i) {
@@ -27,8 +17,6 @@ Test.prototype = {
     }
 }
 
-// recursively traverse a (sub)tree
-
 function traverse(indent, node) {
     console.log(Array(indent++).join("--") + node.name);
 
@@ -38,20 +26,18 @@ function traverse(indent, node) {
 }
 
 function aend() {
-    var tree = new Test("AEND 조직도");
-    var left = new Test("front-end")
-    var mid = new Test("back-end")
-    var right = new Test("app");
-    var leftleft = new Test("senior");
-    var midleft = new Test("senior-one")
-    var midright = new Test("senior-two")
-    var rightleft = new Test("IOS");
-    var rightright = new Test("ANDROID");
-    var leftleftbottom = new Test("junior")
+    var tree = new Composite("AEND 조직도");
+    var left = new Composite("front-end")
+    var mid = new Composite("back-end")
+    var right = new Composite("app");
+    var leftleft = new Composite("senior");
+    var midleft = new Composite("senior-one")
+    var midright = new Composite("senior-two")
+    var rightleft = new Composite("IOS");
+    var rightright = new Composite("ANDROID");
+    var leftleftbottom = new Composite("junior")
 
     tree.add(left);
-    tree.add(right);
-    tree.remove(right);  // note: remove
     tree.add(mid);
     tree.add(right);
 
@@ -64,6 +50,8 @@ function aend() {
     right.add(rightright);
 
     leftleft.add(leftleftbottom);
+
+    console.log(tree.hasChildren());
 
     traverse(1, tree);
 }

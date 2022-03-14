@@ -1,4 +1,5 @@
 var MutipleTable = (function() {
+
     function MutipleTable(numList){
         this.numList = numList;
         this.index = 0;
@@ -28,10 +29,10 @@ MutipleTable.prototype.next = function(){
 
 var mutipleTable = new MutipleTable([1,2,3,4,5,6,7,8,9]);
 
-//다음 으로!
-//mutipleTable.next();
+//다음 구구단으로 
+mutipleTable.next();
 
-//한번에 싹-
-while (!mutipleTable.done()) {
-    mutipleTable.next();
-}
+//반복문 돌려서 1단부터 9단까지
+// while (!mutipleTable.done()) {
+//     mutipleTable.next();
+// }

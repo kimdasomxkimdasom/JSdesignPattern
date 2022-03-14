@@ -8,9 +8,9 @@ var datastore = {
 };
 
 function inherit(proto) {
-    var F = function () { };
-    F.prototype = proto;
-    return new F();
+    var fun = function () { };
+    fun.prototype = proto;
+    return new fun();
 }
 
 function template() {
