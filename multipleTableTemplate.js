@@ -1,7 +1,7 @@
 var datastore = {
     process: function () {
         this.start();
-        this.select();
+        this.progress();
         this.end();
         return true;
     }
@@ -22,7 +22,7 @@ function template() {
         console.log("구구단 : 시작");
     };
 
-    multipleTable.select = function () {
+    multipleTable.progress = function () {
         console.log("구구단 : 진행 중");
         for(let x=1; x<10; x++){
                 console.log(x+"단 은!")
