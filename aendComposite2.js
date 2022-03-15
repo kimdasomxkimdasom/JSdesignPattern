@@ -1,3 +1,5 @@
+  //제로쵸 예제 참고 
+
   // 멤버
   var Member = (function() {
       function Member(name) {

@@ -17,7 +17,6 @@ function template() {
     var multipleTable = inherit(datastore);
 
     // implement template steps
-
     multipleTable.start = function () {
         console.log("구구단 : 시작");
     };

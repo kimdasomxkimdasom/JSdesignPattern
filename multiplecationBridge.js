@@ -1,4 +1,4 @@
-var Multiplecation = function (output) {
+var Multiplecation = function (output) { // 브릿지(인터페이스)
     this.output = output;
 
     this.multipleOne = function () { 
@@ -15,7 +15,7 @@ var Multiplecation = function (output) {
     }
 };
 
-var Square = function (output) {
+var Square = function (output) { // 브릿지(인터페이스)
     this.output = output;
 
     this.squareOne = function () { 
@@ -32,9 +32,9 @@ var Square = function (output) {
     }
 };
 
-// output devices
+// output
 
-var MultiplecationResult = function () {
+var MultiplecationResult = function () { // 구현체 
     this.one = function () { 
         console.log("1단은!"); 
         for(let i=1; i<10; i++){
@@ -61,7 +61,7 @@ var MultiplecationResult = function () {
     }
 };
 
-var SquareResult = function () {
+var SquareResult = function () { // 구현체 
     this.one = function () { 
         console.log("1의 제곱은!"); 
         console.log("result = "+1*1); 
