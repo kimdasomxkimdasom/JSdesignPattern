@@ -1,3 +1,4 @@
+//Flyweight Pattern 예시
 
 function Flyweight(make, model, processor) {
     this.make = make;

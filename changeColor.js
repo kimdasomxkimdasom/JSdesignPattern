@@ -1,3 +1,5 @@
+//Factory Method Pattern 예시 활용 (2)
+
 var ChacngeColor = function () {
     
     this.createColor = function (type) {

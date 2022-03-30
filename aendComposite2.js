@@ -1,3 +1,5 @@
+//Composite Pattern 예시 활용 (2)
+
 var Member = (function() {
     function Member(name) {
       this.name = name;

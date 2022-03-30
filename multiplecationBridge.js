@@ -1,5 +1,8 @@
+//Bridge Pattern 예시 활용 
+
 var Mutiplication = function (output) {
     this.output = output;
+    console.log(output);
 
     this.mutipleOne = function () { 
         this.output.one(); 
@@ -17,6 +20,7 @@ var Mutiplication = function (output) {
 
 var Square = function (output) {
     this.output = output;
+    console.log(output);
 
     this.squareOne = function () { 
         this.output.one(); 

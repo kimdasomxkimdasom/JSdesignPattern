@@ -1,3 +1,5 @@
+//Factory Method Pattern 예시 활용(3)
+
 var Factory = function () {
     this.createEmployee = function (type) {
         var employee;

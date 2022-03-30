@@ -1,3 +1,5 @@
+//Flyweight Pattern 예시 활용 
+
 var Pokemon = (function() {
     function Pokemon(name) { 
       this.name = name;

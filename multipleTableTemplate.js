@@ -1,28 +1,30 @@
-var datastore = {
+//Template Method Pattern 예시 활용 
+
+var storage = {
     process: function () {
         this.start();
-        this.select();
+        this.progress();
         this.end();
         return true;
     }
 };
 
 function inherit(proto) {
-    var fun = function () { };
+
+    var fun = function () {};
     fun.prototype = proto;
     return new fun();
 }
 
 function template() {
-    var multipleTable = inherit(datastore);
 
-    // implement template steps
+    var multipleTable = inherit(storage);
 
     multipleTable.start = function () {
         console.log("구구단 : 시작");
     };
 
-    multipleTable.select = function () {
+    multipleTable.progress = function () {
         console.log("구구단 : 진행 중");
         for(let x=1; x<10; x++){
                 console.log(x+"단 은!")

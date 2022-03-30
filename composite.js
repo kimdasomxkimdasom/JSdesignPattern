@@ -1,3 +1,5 @@
+//Composite Pattern 예시
+
 var Node = function (name) {
     this.children = [];
     this.name = name;

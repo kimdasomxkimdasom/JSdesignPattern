@@ -1,3 +1,5 @@
+//Iterator Pattern 예시
+
 var Iterator = function (items) {
     this.index = 0;
     this.items = items;

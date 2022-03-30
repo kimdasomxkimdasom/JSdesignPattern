@@ -1,12 +1,13 @@
-var MutipleTable = (function() {
+//Iterator Pattern 예시 활용 
 
-    function MutipleTable(numList){
+var MultipleTable = (function() {
+
+    function MultipleTable(numList){
         this.numList = numList;
         this.index = 0;
     }
 
-MutipleTable.prototype.next = function(){
-
+    MultipleTable.prototype.next = function(){
         var index = this.numList[this.index++]
 
         if(index === undefined){
@@ -20,19 +21,11 @@ MutipleTable.prototype.next = function(){
 
         }
     }
-    MutipleTable.prototype.done = function() {
-        return this.numList.length === this.index;
-      };
 
-    return MutipleTable;
+    return MultipleTable;
 })();
 
-var mutipleTable = new MutipleTable([1,2,3,4,5,6,7,8,9]);
+var multipleTable = new MultipleTable([1,2,3,4,5,6,7,8,9]);
 
 //다음 구구단으로 
-mutipleTable.next();
-
-//반복문 돌려서 1단부터 9단까지
-// while (!mutipleTable.done()) {
-//     mutipleTable.next();
-// }
+multipleTable.next();

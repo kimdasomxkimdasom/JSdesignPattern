@@ -25,7 +25,9 @@ var Factory = function () {
             console.error("삐빅! 에러입니다!");
         }
 
+        console.log(num);
         num.type = type;
+        console.log(type);
 
         num.say = function () {
             console.log("구구단을 외자! 구구단을 외자!")
@@ -37,6 +39,7 @@ var Factory = function () {
         
         }
 
+        console.log(num);
         return num;
     }
 }
@@ -61,6 +64,8 @@ var five = function () {
     this.number = 5;
 };
 
+//Factory Pattern 예시 활용 
+
 var six = function () {
     this.number = 6;
 };
@@ -84,11 +89,17 @@ function mutipleFactory() {
     var factory = new Factory();
 
     result.push(factory.create("2단"));
+    console.log(result);
     result.push(factory.create("4단"));
     result.push(factory.create("6단"));
     result.push(factory.create("8단"));
+    console.log(result);
 
     for (var i = 0, len = result.length; i < len; i++) {
         result[i].say();
     }
+    
+	//var err_result = [];
+    
+    //err_result .push(factory.create("10단")); //에러 발생
 }
