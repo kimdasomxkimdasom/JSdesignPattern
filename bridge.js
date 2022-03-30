@@ -1,3 +1,4 @@
+//Bridge Pattern 예시 
 
 var Gestures = function (output) {
     this.output = output;
