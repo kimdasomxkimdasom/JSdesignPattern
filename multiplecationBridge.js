@@ -1,24 +1,25 @@
 //Bridge Pattern 예시 활용 
 
-var Mutiplication = function (output) {
+var Multiplecation = function (output) { // 브릿지(인터페이스)
+
     this.output = output;
     console.log(output);
 
-    this.mutipleOne = function () { 
+    this.multipleOne = function () { 
         this.output.one(); 
     }
-    this.mutipleTwo = function () { 
+    this.multipleTwo = function () { 
         this.output.two(); 
     }
-    this.mutipleThree = function () { 
+    this.multipleThree = function () { 
         this.output.three(); 
     }
-    this.mutipleFour = function () { 
+    this.multipleFour = function () { 
         this.output.four(); 
     }
 };
 
-var Square = function (output) {
+var Square = function (output) { // 브릿지(인터페이스)
     this.output = output;
     console.log(output);
 
@@ -36,9 +37,9 @@ var Square = function (output) {
     }
 };
 
-// output devices
+// output
 
-var MutiplicaionResult = function () {
+var MultiplecationResult = function () { // 구현체 
     this.one = function () { 
         console.log("1단은!"); 
         for(let i=1; i<10; i++){
@@ -65,7 +66,7 @@ var MutiplicaionResult = function () {
     }
 };
 
-var SquareResult = function () {
+var SquareResult = function () { // 구현체 
     this.one = function () { 
         console.log("1의 제곱은!"); 
         console.log("result = "+1*1); 
@@ -86,15 +87,18 @@ var SquareResult = function () {
 
 function bridge() {
 
-    var mutiplicaionResult = new MutiplicaionResult();
-    var squareResult = new SquareResult();
+    // 인터페이스가 하나 있고,
+    // 구현체인 임플이 2개 있는 에제로 바꿔보자..
 
-    var mutiplicationTable = new Mutiplication(mutiplicaionResult);
-    var squares = new Square(squareResult);
+    var multiplecationResult = new MultiplecationResult(); // 임플
+    var squareResult = new SquareResult(); // 임플
 
-    mutiplicationTable.mutipleOne();
-    mutiplicationTable.mutipleThree();
-    mutiplicationTable.mutipleFour();
+    var multiplecationTable = new Multiplecation(multiplecationResult); // 인터페이스
+    var squares = new Square(squareResult); // 인터페이스 
+
+    multiplecationTable.multipleOne();
+    multiplecationTable.multipleThree();
+    multiplecationTable.multipleFour();
 
     squares.squareTwo();
     squares.squareThree();
