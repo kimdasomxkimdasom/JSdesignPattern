@@ -1,6 +1,6 @@
 //Factory Method Pattern 예시 활용 (2)
 
-var ChacngeColor = function () {
+var ChangeColor = function () {
     
     this.createColor = function (type) {
         var color;
@@ -10,7 +10,7 @@ var ChacngeColor = function () {
         } else if (type === "blue") {
             color = new Blue();
         } else if (type === "orange") {
-            color = new Orage();
+            color = new Orange();
         } else if (type === "yellow") {
             color = new Yellow();
         } else {
@@ -35,7 +35,7 @@ var Blue = function () {
     this.color = "파란색";
 };
 
-var Orage = function () {
+var Orange = function () {
     this.color = "주황색";
 };
 
@@ -46,7 +46,7 @@ var Yellow = function () {
 function test() {
 
     var colors = [];
-    var changeColor = new ChacngeColor();
+    var changeColor = new ChangeColor();
 
     colors.push(changeColor.createColor("red"));
     colors.push(changeColor.createColor("blue"));

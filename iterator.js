@@ -14,7 +14,7 @@ Iterator.prototype = {
         return this.items[this.index++];
     },
     hasNext: function () {
-        return this.index <= this.items.length;
+        return this.index < this.items.length;
     },
     reset: function () {
         this.index = 0;
