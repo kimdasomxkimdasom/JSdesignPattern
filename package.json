@@ -4,12 +4,12 @@
   "private": true,
   "description": "JS design pattern study — classic patterns in ES5 JS + modern additions in TypeScript.",
   "scripts": {
-    "singleton": "tsx patterns/singleton.ts",
-    "observer": "tsx patterns/observer.ts",
-    "strategy": "tsx patterns/strategy.ts",
-    "decorator": "tsx patterns/decorator.ts",
-    "adapter": "tsx patterns/adapter.ts",
-    "proxy": "tsx patterns/proxy.ts",
+    "singleton": "tsx patterns/singleton/singleton.ts",
+    "observer": "tsx patterns/observer/observer.ts",
+    "strategy": "tsx patterns/strategy/strategy.ts",
+    "decorator": "tsx patterns/decorator/decorator.ts",
+    "adapter": "tsx patterns/adapter/adapter.ts",
+    "proxy": "tsx patterns/proxy/proxy.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
